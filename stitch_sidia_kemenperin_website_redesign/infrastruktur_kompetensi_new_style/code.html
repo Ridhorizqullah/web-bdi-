@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Infrastruktur Kompetensi - SIDIA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dbe1ff",
+                        "surface-tint": "#0053db",
+                        "primary-container": "#2563eb",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#6b6e70",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary-fixed": "#40000c",
+                        "tertiary-fixed": "#e0e3e5",
+                        "primary": "#004ac6",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#cbdbf5",
+                        "surface": "#f8f9ff",
+                        "on-secondary-fixed-variant": "#920028",
+                        "outline-variant": "#c3c6d7",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#213145",
+                        "on-background": "#0b1c30",
+                        "inverse-primary": "#b4c5ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary-container": "#fffbff",
+                        "on-surface-variant": "#434655",
+                        "background": "#f8f9ff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#ffb3b6",
+                        "tertiary": "#525657",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-container": "#e21e49",
+                        "on-surface": "#0b1c30",
+                        "surface-container-high": "#dce9ff",
+                        "outline": "#737686",
+                        "surface-container-highest": "#d3e4fe",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary-fixed": "#00174b",
+                        "surface-variant": "#d3e4fe",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffdada",
+                        "on-tertiary-container": "#eff1f3",
+                        "secondary": "#ba0035"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "xl": "80px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Public Sans"],
+                        "h3": ["Public Sans"],
+                        "button": ["Public Sans"],
+                        "label-sm": ["Public Sans"],
+                        "h1": ["Public Sans"],
+                        "body-lg": ["Public Sans"],
+                        "h2": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; background-color: #f8f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .sidebar-active { background-color: #e5eeff; color: #004ac6; border-right: 4px solid #004ac6; }
+    </style>
+</head>
+<body class="text-on-background">
+<!-- TopNavBar -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between w-full">
+<div class="flex items-center gap-12">
+<div class="text-2xl font-bold text-blue-600">SIDIA</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-gray-600 font-medium hover:text-blue-600" href="#">Home</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="#">Berita</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="#">Satuan Kerja</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="#">Statistik</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="#">Diklat</a>
+<a class="text-blue-600 border-b-2 border-blue-600 pb-1 font-bold" href="#">Infrastruktur</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 mr-4">
+<button class="p-2 text-gray-500 hover:bg-gray-50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<button class="p-2 text-gray-500 hover:bg-gray-50 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+</button>
+</div>
+<a class="px-6 py-2.5 text-blue-600 font-semibold border border-blue-600 rounded-lg hover:bg-blue-50 transition-all" href="#">Login</a>
+<a class="px-6 py-2.5 bg-rose-600 text-white font-semibold rounded-lg hover:bg-rose-700 transition-all shadow-md" href="#">Pendaftaran</a>
+</div>
+</div>
+</header>
+<div class="max-w-[1280px] mx-auto px-6 py-10 flex gap-gutter">
+<!-- Sidebar Navigation -->
+<aside class="w-72 shrink-0">
+<div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-gray-100">
+<h2 class="font-h3 text-h3 text-on-surface">Infrastruktur</h2>
+<p class="text-label-sm text-outline mt-1">Kompetensi Nasional</p>
+</div>
+<nav class="py-4">
+<a class="flex items-center gap-4 px-6 py-4 sidebar-active transition-all" href="code.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all border-r-4 border-transparent" href="skkni.html">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-medium">SKKNI</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all border-r-4 border-transparent" href="kkni.html">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-medium">KKNI</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all border-r-4 border-transparent" href="lsp.html">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span class="font-medium">LSP</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all border-r-4 border-transparent" href="asesor.html">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+<span class="font-medium">Asesor</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all border-r-4 border-transparent" href="tuk.html">
+<span class="material-symbols-outlined" data-icon="location_city">location_city</span>
+<span class="font-medium">TUK</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all border-r-4 border-transparent" href="sertifikasi.html">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-medium">Sertifikasi</span>
+</a>
+</nav>
+</div>
+<!-- Promotion / Help Card -->
+<div class="mt-8 relative rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-blue-900/60 z-10"></div>
+<img alt="Help Center" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern professional office setting with soft natural lighting and collaborative atmosphere for customer support concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3lw9GPTaRLYryVUsk2gCc_F5sXLrA0zlqEgZE_Owf32BmL1DujyJsdmeY_IAI1v7xqjSfD4WvuAZTH7dlr0AJC--qj20z2fFGlc_9lboAUjYj7V05W5K1CZ_FEnJuoBlaZo4y_zx7Sx41D9J3YGFnBDlqd_yok9-h43yVH0vPJ5d7bbX29qbygnRowURG-umS6g0TKQPcPIx1a8NDwtvtLz_a-j0smXnC3XXFS04HoHYrkpAh2kA7JLHpT3y-_ZXJFJWgEgq_Dg"/>
+<div class="absolute inset-0 z-20 p-6 flex flex-col justify-end">
+<h4 class="text-white font-bold">Butuh Bantuan?</h4>
+<p class="text-blue-100 text-xs mt-1">Konsultasi mengenai infrastruktur kompetensi</p>
+<button class="mt-4 bg-white text-blue-600 text-xs font-bold py-2 px-4 rounded-lg self-start">Hubungi Kami</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1">
+<!-- Header Summary -->
+<div class="mb-10">
+<h1 class="font-h1 text-h1 text-on-background tracking-tight">Overview Infrastruktur Kompetensi</h1>
+<p class="text-body-lg text-outline-variant mt-2 max-w-3xl">Pusat data dan monitoring infrastruktur standardisasi kompetensi kerja nasional, lembaga sertifikasi, dan sarana penunjang kompetensi di Indonesia.</p>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-12 gap-6 mb-10">
+<!-- Large Stats Card -->
+<div class="col-span-8 bg-white border border-gray-200 rounded-xl p-8 shadow-sm flex items-center justify-between">
+<div>
+<span class="text-label-sm font-semibold text-blue-600 uppercase tracking-wider">Total Sertifikasi Terbit</span>
+<div class="mt-4 flex items-baseline gap-4">
+<span class="text-5xl font-extrabold text-on-background">1.248.902</span>
+<span class="text-green-600 font-bold flex items-center text-sm">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="trending_up">trending_up</span>
+                                +12.5%
+                            </span>
+</div>
+<p class="text-outline text-sm mt-4">Data akumulasi dari 450+ LSP yang terdaftar resmi di sistem SIDIA sejak awal tahun operasional.</p>
+</div>
+<div class="w-32 h-32 bg-blue-50 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600 !text-5xl" data-icon="military_tech">military_tech</span>
+</div>
+</div>
+<!-- Small Info Card -->
+<div class="col-span-4 bg-primary text-white border border-transparent rounded-xl p-8 shadow-lg shadow-blue-900/10">
+<span class="text-label-sm font-semibold text-blue-200 uppercase tracking-wider">Lembaga LSP Aktif</span>
+<div class="mt-4">
+<span class="text-5xl font-extrabold">452</span>
+</div>
+<p class="text-blue-100/80 text-sm mt-4">Peningkatan 15 lembaga baru dalam kuartal terakhir tahun ini.</p>
+</div>
+<!-- Secondary Stats Row -->
+<div class="col-span-3 bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 bg-rose-50 text-rose-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+</div>
+</div>
+<span class="text-label-sm text-outline block">Total SKKNI</span>
+<span class="text-2xl font-bold text-on-background block mt-1">1.840</span>
+</div>
+<div class="col-span-3 bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 bg-amber-50 text-amber-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+</div>
+<span class="text-label-sm text-outline block">Asesor Terdaftar</span>
+<span class="text-2xl font-bold text-on-background block mt-1">12.405</span>
+</div>
+<div class="col-span-3 bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 bg-emerald-50 text-emerald-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="location_city">location_city</span>
+</div>
+</div>
+<span class="text-label-sm text-outline block">TUK Verifikasi</span>
+<span class="text-2xl font-bold text-on-background block mt-1">3.120</span>
+</div>
+<div class="col-span-3 bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="p-3 bg-purple-50 text-purple-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+</div>
+</div>
+<span class="text-label-sm text-outline block">Jenjang KKNI</span>
+<span class="text-2xl font-bold text-on-background block mt-1">9 Level</span>
+</div>
+</div>
+<!-- Content Split: Recent & Map -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Recent Updates List -->
+<div class="col-span-5 bg-white border border-gray-200 rounded-xl shadow-sm">
+<div class="p-6 border-b border-gray-100 flex items-center justify-between">
+<h3 class="font-bold text-on-background">Pembaruan Terkini</h3>
+<button class="text-blue-600 text-xs font-bold hover:underline">Lihat Semua</button>
+</div>
+<div class="p-2">
+<div class="p-4 hover:bg-gray-50 rounded-lg transition-colors flex gap-4 border-b border-gray-50 last:border-0">
+<div class="w-10 h-10 shrink-0 bg-blue-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600" data-icon="assignment_add">assignment_add</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">SKKNI Sektor TIK 2024</h4>
+<p class="text-xs text-outline mt-1">Penetapan standar kompetensi baru untuk bidang Cybersecurity.</p>
+<span class="text-[10px] text-gray-400 mt-2 block">2 Jam yang lalu</span>
+</div>
+</div>
+<div class="p-4 hover:bg-gray-50 rounded-lg transition-colors flex gap-4 border-b border-gray-50 last:border-0">
+<div class="w-10 h-10 shrink-0 bg-rose-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-rose-600" data-icon="domain_verification">domain_verification</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">LSP Pariwisata Mandiri</h4>
+<p class="text-xs text-outline mt-1">Status verifikasi dokumen: Terakreditasi P3 oleh BNSP.</p>
+<span class="text-[10px] text-gray-400 mt-2 block">Kemarin</span>
+</div>
+</div>
+<div class="p-4 hover:bg-gray-50 rounded-lg transition-colors flex gap-4 border-b border-gray-50 last:border-0">
+<div class="w-10 h-10 shrink-0 bg-amber-100 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-amber-600" data-icon="group_add">group_add</span>
+</div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">Pelatihan Asesor Kompetensi</h4>
+<p class="text-xs text-outline mt-1">Pendaftaran angkatan ke-4 telah dibuka untuk wilayah Jawa Barat.</p>
+<span class="text-[10px] text-gray-400 mt-2 block">3 Hari yang lalu</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Geographical Reach -->
+<div class="col-span-7 bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+<div class="p-6 border-b border-gray-100">
+<h3 class="font-bold text-on-background">Sebaran TUK Nasional</h3>
+</div>
+<div class="relative h-[300px] bg-slate-100">
+<!-- Simulated Map Visual -->
+<div class="absolute inset-0 opacity-20" data-alt="Abstract aerial map visualization with glowing data nodes and connections representing digital infrastructure" data-location="Indonesia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALfByZE5EdaQG15JA8k09PzN2AyA94UJEx_r6KYjnDDpWaPKdl1B76I20ETOLTsJgZJvY01I5rJ2P814rn-7h6JDVu1Tt5IdqGI8FQHs5yC5TsOS4kxNUOgELztC9x74ygiv12HOCVvXR3ufaBEUh6gEIe785A465ys1gPrlAp85jpTs9SWLv7OZ1vYkbLL9GWCXZhwLnM-WgJ-XWjoYnpUJ7KWGv5ZiPWXttC7BqadFgLhlRWYzpzvCpkvaR5ZfZyDln5e4MFdA'); background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined !text-6xl text-blue-600/40" data-icon="map">map</span>
+<p class="text-sm text-outline-variant font-medium mt-2">Visualisasi Interaktif Wilayah</p>
+</div>
+</div>
+<!-- Floating markers -->
+<div class="absolute top-1/2 left-1/4 w-3 h-3 bg-rose-500 rounded-full border-2 border-white shadow-lg animate-pulse"></div>
+<div class="absolute top-1/3 left-1/2 w-3 h-3 bg-blue-500 rounded-full border-2 border-white shadow-lg"></div>
+<div class="absolute top-2/3 right-1/4 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white shadow-lg"></div>
+</div>
+<div class="p-6 grid grid-cols-3 gap-4 border-t border-gray-100">
+<div class="text-center">
+<span class="text-label-sm text-outline">Sumatera</span>
+<span class="block text-lg font-bold text-on-background">842</span>
+</div>
+<div class="text-center border-x border-gray-100">
+<span class="text-label-sm text-outline">Jawa &amp; Bali</span>
+<span class="block text-lg font-bold text-on-background">1.450</span>
+</div>
+<div class="text-center">
+<span class="text-label-sm text-outline">Lainnya</span>
+<span class="block text-lg font-bold text-on-background">828</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-gray-50 border-t border-gray-200 mt-20">
+<div class="max-w-[1280px] mx-auto px-8 py-12 w-full">
+<div class="grid grid-cols-12 gap-8 mb-12">
+<div class="col-span-4">
+<div class="text-xl font-bold text-gray-900 mb-4">SIDIA</div>
+<p class="text-body-md text-gray-500 max-w-sm">Sistem Informasi Digital Infrastruktur Kompetensi Terpadu Pemerintah Republik Indonesia.</p>
+</div>
+<div class="col-span-8 flex justify-end gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-bold text-gray-900">Navigasi</span>
+<a class="text-gray-500 hover:text-blue-600 transition-colors" href="#">Tentang Kami</a>
+<a class="text-gray-500 hover:text-blue-600 transition-colors" href="#">Hubungi Kami</a>
+<a class="text-gray-500 hover:text-blue-600 transition-colors" href="#">Bantuan</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-bold text-gray-900">Legalitas</span>
+<a class="text-gray-500 hover:text-blue-600 transition-colors" href="#">Kebijakan Privasi</a>
+<a class="text-gray-500 hover:text-blue-600 transition-colors" href="#">Syarat &amp; Ketentuan</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-200 flex justify-between items-center">
+<p class="text-xs text-gray-500">Â© 2024 SIDIA Portal Pemerintah. Seluruh Hak Cipta Dilindungi.</p>
+<div class="flex gap-4">
+<button class="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="facebook">social_leaderboard</span>
+</button>
+<button class="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = {
+        'home': '../home_sidia_new_style/code.html',
+        'berita': '../berita_sidia_new_style/code.html',
+        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
+        'statistik': '../statistik_sidia_new_style/code.html',
+        'diklat': '../diklat_sidia_new_style/code.html',
+        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
+        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
+        'login': '../login_sidia_new_style/code.html',
+        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
+        'sidia': '../home_sidia_new_style/code.html'
+    };
+
+    const handleNavigation = (text) => {
+        text = text.toLowerCase().trim();
+        // Check for exact matches first
+        for (const [key, path] of Object.entries(routeMap)) {
+            if (text === key) {
+                window.location.href = path;
+                return true;
+            }
+        }
+        // Then partial matches
+        for (const [key, path] of Object.entries(routeMap)) {
+            if (text.includes(key)) {
+                window.location.href = path;
+                return true;
+            }
+        }
+        return false;
+    };
+
+    document.addEventListener('click', (e) => {
+        const target = e.target.closest('a, button, [role="button"]');
+        if (!target) return;
+
+        const text = target.innerText.trim();
+        if (text && handleNavigation(text)) {
+            e.preventDefault();
+        }
+    });
+
+    // Special case for the SIDIA logo
+    const elements = document.querySelectorAll('span, div, a');
+    elements.forEach(el => {
+        if (el.innerText.trim() === 'SIDIA') {
+            el.style.cursor = 'pointer';
+            el.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.location.href = routeMap['home'];
+            });
+        }
+    });
+});
+</script>
+</body></html>
+
+
