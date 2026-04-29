@@ -114,52 +114,11 @@
             100% { transform: translateX(-50%); }
         }
     </style>
+
+<script src="../shared/components.js" data-page="berita"></script>
 </head>
 <body class="bg-background font-body-md text-on-background">
-<!-- Top Navigation Bar -->
-<nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm sticky top-0 z-50">
-<div class="max-w-[1280px] mx-auto px-6 flex flex-col w-full">
-<div class="flex items-center justify-between h-20">
-<div class="text-2xl font-bold text-blue-600 dark:text-blue-400">SIDIA</div>
-<!-- Desktop Links -->
-<div class="hidden md:flex items-center space-x-8 font-public-sans text-sm font-medium">
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">Home</a>
-<a class="text-blue-600 border-b-2 border-blue-600 pb-1 font-bold" href="#">Berita</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">Satuan Kerja</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">Statistik</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">Diklat</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" href="#">Infrastruktur</a>
-</div>
-<div class="flex items-center space-x-4">
-<div class="flex items-center space-x-2 mr-4">
-<span class="material-symbols-outlined text-gray-500 cursor-pointer hover:text-blue-600" data-icon="language">language</span>
-<span class="material-symbols-outlined text-gray-500 cursor-pointer hover:text-blue-600" data-icon="map">map</span>
-</div>
-<button class="bg-white border border-gray-200 text-blue-600 px-4 py-2 rounded-lg font-button text-button hover:bg-gray-50 transition-all scale-95 active:scale-90 duration-150">Login</button>
-<button class="bg-[#E11D48] text-white px-4 py-2 rounded-lg font-button text-button hover:opacity-90 transition-all scale-95 active:scale-90 duration-150">Pendaftaran</button>
-</div>
-</div>
-</div>
-</nav>
-<!-- Breaking News Ticker -->
-<div class="bg-primary text-white py-3 overflow-hidden">
-<div class="max-w-[1280px] mx-auto px-6 flex items-center">
-<div class="bg-secondary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-wider mr-4 flex-shrink-0">Breaking News</div>
-<div class="relative flex-1 overflow-hidden">
-<div class="ticker-scroll flex space-x-12 font-medium text-sm">
-<span>Kemenperin Dorong Percepatan Transformasi Industri Digital Melalui Program Startup4Industry 2024</span>
-<span>Pendaftaran Diklat Vokasi Industri Gelombang III Resmi Dibuka Mulai Hari Ini</span>
-<span>Indeks Kepercayaan Industri (IKI) Bulan Mei Mencapai Level Ekspansi 52,1 Poin</span>
-<span>Pemerintah Berikan Insentif Fiskal bagi Pelaku Usaha Berorientasi Ekspor</span>
-<!-- Duplicate for infinite loop effect -->
-<span>Kemenperin Dorong Percepatan Transformasi Industri Digital Melalui Program Startup4Industry 2024</span>
-<span>Pendaftaran Diklat Vokasi Industri Gelombang III Resmi Dibuka Mulai Hari Ini</span>
-<span>Indeks Kepercayaan Industri (IKI) Bulan Mei Mencapai Level Ekspansi 52,1 Poin</span>
-</div>
-</div>
-</div>
-</div>
-<main class="max-w-[1280px] mx-auto px-6 py-xl">
+<div id="sidia-header"></div><main class="max-w-[1280px] mx-auto px-6 py-xl">
 <!-- Header & Search Section -->
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-lg">
 <div>
@@ -412,87 +371,9 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 mt-20">
-<div class="max-w-[1280px] mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-start md:items-center w-full gap-8">
-<div class="flex flex-col gap-4">
-<div class="text-lg font-bold text-gray-900 dark:text-white">SIDIA</div>
-<p class="text-gray-500 text-xs max-w-sm">Portal resmi Informasi Digital Industri dan Pelatihan. Memberikan akses cepat dan transparan bagi seluruh stakeholder perindustrian di Indonesia.</p>
-</div>
-<div class="flex flex-wrap gap-x-8 gap-y-4">
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Tentang Kami</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Hubungi Kami</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Kebijakan Privasi</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Syarat &amp; Ketentuan</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Bantuan</a>
-</div>
-</div>
-<div class="max-w-[1280px] mx-auto px-8 py-6 border-t border-gray-100 dark:border-gray-900 flex justify-between items-center">
-<p class="font-public-sans text-xs text-gray-500">Â© 2024 SIDIA Portal Pemerintah. Seluruh Hak Cipta Dilindungi.</p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-gray-400 cursor-pointer hover:text-blue-600" data-icon="share">share</span>
-<span class="material-symbols-outlined text-gray-400 cursor-pointer hover:text-blue-600" data-icon="public">public</span>
-</div>
-</div>
-</footer>
+<div id="sidia-footer"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const routeMap = {
-        'home': '../home_sidia_new_style/code.html',
-        'berita': '../berita_sidia_new_style/code.html',
-        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
-        'statistik': '../statistik_sidia_new_style/code.html',
-        'diklat': '../diklat_sidia_new_style/code.html',
-        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
-        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
-        'login': '../login_sidia_new_style/code.html',
-        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
-        'sidia': '../home_sidia_new_style/code.html'
-    };
 
-    const handleNavigation = (text) => {
-        text = text.toLowerCase().trim();
-        // Check for exact matches first
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text === key) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        // Then partial matches
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text.includes(key)) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        return false;
-    };
-
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('a, button, [role="button"]');
-        if (!target) return;
-
-        const text = target.innerText.trim();
-        if (text && handleNavigation(text)) {
-            e.preventDefault();
-        }
-    });
-
-    // Special case for the SIDIA logo
-    const elements = document.querySelectorAll('span, div, a');
-    elements.forEach(el => {
-        if (el.innerText.trim() === 'SIDIA') {
-            el.style.cursor = 'pointer';
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                window.location.href = routeMap['home'];
-            });
-        }
-    });
-});
-</script>
 </body></html>
 
 

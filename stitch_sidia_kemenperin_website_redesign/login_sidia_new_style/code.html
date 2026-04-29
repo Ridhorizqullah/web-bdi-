@@ -106,33 +106,12 @@
         }
         body { font-family: 'Public Sans', sans-serif; }
     </style>
+
+<script src="../shared/components.js" data-page="login"></script>
 </head>
-<body class="bg-background text-on-surface min-h-screen flex flex-col">
-<!-- TopNavBar (Shared Component) -->
-<header class="bg-white dark:bg-gray-900 border-b-2 border-gray-100 dark:border-gray-800 shadow-sm dark:shadow-none sticky top-0 z-50">
-<div class="flex flex-col w-full max-w-7xl mx-auto px-4 md:px-8">
-<div class="flex items-center justify-between py-4">
-<div class="flex items-center gap-4">
-<span class="text-2xl font-black text-blue-600 dark:text-blue-500 font-public-sans tracking-tight">SIDIA</span>
-<div class="hidden md:flex items-center gap-6 ml-8">
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm" href="#">Beranda</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm" href="#">Program Diklat</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm" href="#">Jadwal</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm" href="#">Informasi</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm" href="#">Kontak</a>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<div class="flex items-center gap-2 mr-4">
-<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="language">language</span>
-<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="account_tree">account_tree</span>
-</div>
-<button class="px-4 py-2 border border-outline text-primary font-button hover:bg-gray-50 transition-colors rounded">Login</button>
-<button class="px-4 py-2 bg-secondary-container text-on-secondary font-button hover:opacity-90 transition-opacity rounded">Pendaftaran</button>
-</div>
-</div>
-</div>
-</header>
+<body class="bg-background text-on-surface min-h-screen flex flex-col"><div id="sidia-header"></div>
+
+
 <!-- Main Content Canvas -->
 <main class="flex-grow relative flex items-center justify-center py-xl px-4 overflow-hidden">
 <!-- Industrial Theme Background with Overlay -->
@@ -201,94 +180,9 @@
 </div>
 </main>
 <!-- Footer (Shared Component) -->
-<footer class="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12 px-6 max-w-7xl mx-auto">
-<div class="lg:col-span-2">
-<span class="font-bold text-gray-900 dark:text-white text-xl block mb-4">SIDIA</span>
-<p class="text-gray-500 dark:text-gray-400 font-public-sans text-sm max-w-md">
-                    Sistem Informasi Diklat Industri merupakan portal terintegrasi untuk pengelolaan pelatihan dan pengembangan sumber daya manusia di sektor industri Indonesia.
-                </p>
-</div>
-<div>
-<h4 class="font-bold text-gray-900 dark:text-white mb-4">Navigasi</h4>
-<ul class="space-y-2">
-<li><a class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-public-sans text-sm" href="#">Beranda</a></li>
-<li><a class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-public-sans text-sm" href="#">Program Diklat</a></li>
-<li><a class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-public-sans text-sm" href="#">Peta Situs</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-gray-900 dark:text-white mb-4">Hubungi Kami</h4>
-<ul class="space-y-2">
-<li><a class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-public-sans text-sm" href="#">Kebijakan Privasi</a></li>
-<li><a class="text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-public-sans text-sm" href="#">Kontak Kami</a></li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-200 dark:border-gray-800 py-6 text-center">
-<p class="text-gray-500 dark:text-gray-400 font-public-sans text-sm">
-                Â© 2024 Sistem Informasi Diklat Industri (SIDIA). Kementerian Perindustrian RI.
-            </p>
-</div>
-</footer>
+<div id="sidia-footer"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const routeMap = {
-        'home': '../home_sidia_new_style/code.html',
-        'berita': '../berita_sidia_new_style/code.html',
-        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
-        'statistik': '../statistik_sidia_new_style/code.html',
-        'diklat': '../diklat_sidia_new_style/code.html',
-        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
-        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
-        'login': '../login_sidia_new_style/code.html',
-        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
-        'sidia': '../home_sidia_new_style/code.html'
-    };
 
-    const handleNavigation = (text) => {
-        text = text.toLowerCase().trim();
-        // Check for exact matches first
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text === key) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        // Then partial matches
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text.includes(key)) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        return false;
-    };
-
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('a, button, [role="button"]');
-        if (!target) return;
-
-        const text = target.innerText.trim();
-        if (text && handleNavigation(text)) {
-            e.preventDefault();
-        }
-    });
-
-    // Special case for the SIDIA logo
-    const elements = document.querySelectorAll('span, div, a');
-    elements.forEach(el => {
-        if (el.innerText.trim() === 'SIDIA') {
-            el.style.cursor = 'pointer';
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                window.location.href = routeMap['home'];
-            });
-        }
-    });
-});
-</script>
 </body></html>
 
 

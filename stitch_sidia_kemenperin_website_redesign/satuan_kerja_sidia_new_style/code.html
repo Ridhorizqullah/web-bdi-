@@ -107,38 +107,11 @@
     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDStI3R8Fkrtn02n1aWq0I0rqrQqasz7x-YzwvOZN30yPoFACfrn2NpEjJnu9wsFBSJ3sOCYHtjSpV36HfpQjRkJgXkPXPhRVFZhVRFs0HsIN_7CE8YBJR-0y-4aUBIXdcV_TqEO1oJ8bHozLyEIqDCN8kphbcBY0kh1IhiD5HSvysJjQj4r6IE6kaH2OyZspdQ-fhyMOfKSZ2Mc5ENSHHKHmI8zxmEMqubRsYXs303aIuPpIuQImrpu_4pS8rM2AJRXWxj2QV6Cg);
     background-blend-mode: overlay
     }</style>
+
+<script src="../shared/components.js" data-page="satuan-kerja"></script>
 </head>
 <body class="bg-background font-body-md text-on-background">
-<!-- TopNavBar -->
-<header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-sm sticky top-0 z-50">
-<div class="max-w-[1280px] mx-auto px-6 flex flex-col w-full">
-<div class="flex items-center justify-between h-20">
-<div class="flex items-center gap-12">
-<span class="text-2xl font-bold text-blue-600 dark:text-blue-400">SIDIA</span>
-<nav class="hidden md:flex items-center gap-8 font-public-sans text-sm font-medium">
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors" href="#">Home</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors" href="#">Berita</a>
-<a class="text-blue-600 border-b-2 border-blue-600 pb-1 font-bold" href="#">Satuan Kerja</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors" href="#">Statistik</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors" href="#">Diklat</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors" href="#">Infrastruktur</a>
-</nav>
-</div>
-<div class="flex items-center gap-4">
-<button class="p-2 text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">
-<span class="material-symbols-outlined">language</span>
-</button>
-<button class="p-2 text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg">
-<span class="material-symbols-outlined">map</span>
-</button>
-<div class="h-6 w-px bg-gray-200 mx-2"></div>
-<button class="font-button text-blue-600 px-4 py-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Login</button>
-<button class="font-button bg-[#E11D48] text-white px-6 py-2 rounded shadow-sm hover:brightness-90 transition-all active:scale-95 duration-150">Pendaftaran</button>
-</div>
-</div>
-</div>
-</header>
-<main class="min-h-screen">
+<div id="sidia-header"></div><main class="w-full">
 <!-- Hero & Search Section -->
 <section class="relative bg-primary text-white py-xl overflow-hidden">
 <div class="absolute inset-0 opacity-10 bg-map-overlay bg-cover bg-center" data-alt="minimalist silhouette of indonesian archipelago map on a dark blue background with subtle grid lines"></div>
@@ -362,89 +335,9 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 mt-20">
-<div class="max-w-[1280px] mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center w-full gap-8">
-<div class="flex flex-col gap-4 items-center md:items-start text-center md:text-left">
-<span class="text-lg font-bold text-gray-900 dark:text-white">SIDIA</span>
-<p class="font-public-sans text-xs text-gray-500 max-w-xs">Sistem Informasi Diklat Industri dan Aparatur Kementerian Perindustrian Republik Indonesia.</p>
-<p class="font-public-sans text-xs text-gray-500 opacity-80">Â© 2024 SIDIA Portal Pemerintah. Seluruh Hak Cipta Dilindungi.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-6">
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Tentang Kami</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Hubungi Kami</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Kebijakan Privasi</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Syarat &amp; Ketentuan</a>
-<a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline transition-all" href="#">Bantuan</a>
-</div>
-<div class="flex gap-4">
-<button class="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-500 hover:text-blue-600 transition-colors">
-<span class="material-symbols-outlined text-sm">social_leaderboard</span>
-</button>
-<button class="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-500 hover:text-blue-600 transition-colors">
-<span class="material-symbols-outlined text-sm">alternate_email</span>
-</button>
-</div>
-</div>
-</footer>
+<div id="sidia-footer"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const routeMap = {
-        'home': '../home_sidia_new_style/code.html',
-        'berita': '../berita_sidia_new_style/code.html',
-        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
-        'statistik': '../statistik_sidia_new_style/code.html',
-        'diklat': '../diklat_sidia_new_style/code.html',
-        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
-        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
-        'login': '../login_sidia_new_style/code.html',
-        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
-        'sidia': '../home_sidia_new_style/code.html'
-    };
 
-    const handleNavigation = (text) => {
-        text = text.toLowerCase().trim();
-        // Check for exact matches first
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text === key) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        // Then partial matches
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text.includes(key)) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        return false;
-    };
-
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('a, button, [role="button"]');
-        if (!target) return;
-
-        const text = target.innerText.trim();
-        if (text && handleNavigation(text)) {
-            e.preventDefault();
-        }
-    });
-
-    // Special case for the SIDIA logo
-    const elements = document.querySelectorAll('span, div, a');
-    elements.forEach(el => {
-        if (el.innerText.trim() === 'SIDIA') {
-            el.style.cursor = 'pointer';
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                window.location.href = routeMap['home'];
-            });
-        }
-    });
-});
-</script>
 </body></html>
 
 

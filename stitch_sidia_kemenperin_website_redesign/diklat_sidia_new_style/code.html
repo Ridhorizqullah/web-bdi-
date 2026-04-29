@@ -106,36 +106,11 @@
         }
         .nav-active { border-bottom: 2px solid #004ac6; color: #004ac6; font-weight: 700; }
     </style>
+
+<script src="../shared/components.js" data-page="diklat"></script>
 </head>
 <body class="bg-background font-body-md text-on-background">
-<!-- TopNavBar -->
-<header class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
-<div class="max-w-[1280px] mx-auto px-6 flex flex-col w-full">
-<div class="flex items-center justify-between h-20">
-<!-- Brand Logo -->
-<div class="text-2xl font-bold text-blue-600 dark:text-blue-400">SIDIA</div>
-<!-- Desktop Nav -->
-<nav class="hidden md:flex items-center space-x-8 font-public-sans text-sm font-medium">
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600" href="#">Home</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600" href="#">Berita</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600" href="#">Satuan Kerja</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600" href="#">Statistik</a>
-<a class="text-blue-600 border-b-2 border-blue-600 pb-1 font-bold" href="#">Diklat</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-600" href="#">Infrastruktur</a>
-</nav>
-<!-- Actions -->
-<div class="flex items-center space-x-4">
-<div class="flex items-center space-x-2 mr-4">
-<span class="material-symbols-outlined text-gray-500 cursor-pointer p-2 hover:bg-gray-50 rounded-full" data-icon="language">language</span>
-<span class="material-symbols-outlined text-gray-500 cursor-pointer p-2 hover:bg-gray-50 rounded-full" data-icon="map">map</span>
-</div>
-<button class="px-5 py-2 bg-white border border-gray-200 text-blue-600 font-button text-button rounded-lg hover:bg-gray-50 transition-colors">Login</button>
-<button class="px-5 py-2 bg-[#E11D48] text-white font-button text-button rounded-lg hover:opacity-90 transition-opacity">Pendaftaran</button>
-</div>
-</div>
-</div>
-</header>
-<main class="max-w-[1280px] mx-auto px-6 py-12">
+<div id="sidia-header"></div><main class="w-full">
 <!-- Hero / Header Section -->
 <section class="mb-xl">
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-md">
@@ -305,100 +280,9 @@
 </button>
 </div>
 </main>
-<!-- Footer -->
-<footer class="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 mt-20">
-<div class="max-w-[1280px] mx-auto px-8 py-12 w-full">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-lg">
-<div class="col-span-2">
-<div class="text-lg font-bold text-gray-900 dark:text-white mb-4">SIDIA</div>
-<p class="font-public-sans text-xs text-gray-500 max-w-sm leading-relaxed">
-                        Sistem Informasi Pendidikan dan Pelatihan Industri (SIDIA) adalah portal resmi Kementerian Perindustrian untuk pengelolaan pengembangan kompetensi sumber daya manusia industri nasional.
-                    </p>
-</div>
-<div>
-<h4 class="font-bold text-sm text-gray-900 mb-4">Navigasi</h4>
-<ul class="space-y-2">
-<li><a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline" href="#">Tentang Kami</a></li>
-<li><a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline" href="#">Hubungi Kami</a></li>
-<li><a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline" href="#">Bantuan</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-sm text-gray-900 mb-4">Legal</h4>
-<ul class="space-y-2">
-<li><a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline" href="#">Kebijakan Privasi</a></li>
-<li><a class="font-public-sans text-xs text-gray-500 hover:text-blue-600 hover:underline" href="#">Syarat &amp; Ketentuan</a></li>
-</ul>
-</div>
-</div>
-<div class="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-<p class="font-public-sans text-xs text-gray-500">Â© 2024 SIDIA Portal Pemerintah. Seluruh Hak Cipta Dilindungi.</p>
-<div class="flex space-x-4">
-<span class="material-symbols-outlined text-gray-400 hover:text-blue-600 cursor-pointer" data-icon="facebook">social_leaderboard</span>
-<span class="material-symbols-outlined text-gray-400 hover:text-blue-600 cursor-pointer" data-icon="twitter">retweet</span>
-<span class="material-symbols-outlined text-gray-400 hover:text-blue-600 cursor-pointer" data-icon="instagram">retweet</span>
-</div>
-</div>
-</div>
-</footer>
+<div id="sidia-footer"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const routeMap = {
-        'home': '../home_sidia_new_style/code.html',
-        'berita': '../berita_sidia_new_style/code.html',
-        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
-        'statistik': '../statistik_sidia_new_style/code.html',
-        'diklat': '../diklat_sidia_new_style/code.html',
-        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
-        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
-        'login': '../login_sidia_new_style/code.html',
-        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
-        'sidia': '../home_sidia_new_style/code.html'
-    };
 
-    const handleNavigation = (text) => {
-        text = text.toLowerCase().trim();
-        // Check for exact matches first
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text === key) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        // Then partial matches
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text.includes(key)) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        return false;
-    };
-
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('a, button, [role="button"]');
-        if (!target) return;
-
-        const text = target.innerText.trim();
-        if (text && handleNavigation(text)) {
-            e.preventDefault();
-        }
-    });
-
-    // Special case for the SIDIA logo
-    const elements = document.querySelectorAll('span, div, a');
-    elements.forEach(el => {
-        if (el.innerText.trim() === 'SIDIA') {
-            el.style.cursor = 'pointer';
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                window.location.href = routeMap['home'];
-            });
-        }
-    });
-});
-</script>
 </body></html>
 
 

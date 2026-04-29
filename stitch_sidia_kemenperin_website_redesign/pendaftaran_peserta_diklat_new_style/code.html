@@ -109,39 +109,12 @@
             background-color: #f8f9ff;
         }
     </style>
+
+<script src="../shared/components.js" data-page="pendaftaran"></script>
 </head>
-<body class="bg-background text-on-background">
-<!-- Top Navigation Shell -->
-<header class="bg-white dark:bg-gray-900 border-b-2 border-gray-100 dark:border-gray-800 shadow-sm dark:shadow-none sticky top-0 z-50">
-<div class="flex flex-col w-full max-w-7xl mx-auto px-4 md:px-8">
-<!-- Top Tier: Branding & Quick Actions -->
-<div class="flex items-center justify-between py-4 border-b border-gray-50">
-<div class="flex items-center gap-4">
-<span class="text-2xl font-black text-blue-600 dark:text-blue-500 tracking-tight">SIDIA</span>
-<div class="hidden md:block h-8 w-px bg-gray-200 mx-2"></div>
-<div class="hidden md:flex flex-col">
-<span class="text-[10px] uppercase font-bold text-gray-500 leading-none">Kementerian Perindustrian RI</span>
-<span class="text-xs font-semibold text-gray-800">Sistem Informasi Diklat Industri</span>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<button class="material-symbols-outlined p-2 text-gray-600 hover:bg-gray-50 rounded-full transition-colors" data-icon="language">language</button>
-<button class="material-symbols-outlined p-2 text-gray-600 hover:bg-gray-50 rounded-full transition-colors" data-icon="account_tree">account_tree</button>
-<div class="h-6 w-px bg-gray-200 mx-1"></div>
-<button class="px-4 py-2 text-gray-600 font-button text-button hover:text-blue-500 transition-colors">Login</button>
-<button class="px-6 py-2 bg-secondary text-white font-button text-button rounded-xl hover:opacity-90 shadow-sm transition-all">Pendaftaran</button>
-</div>
-</div>
-<!-- Bottom Tier: Navigation Links -->
-<nav class="hidden md:flex items-center gap-8 py-3">
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm text-label-sm transition-colors" href="#">Beranda</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm text-label-sm transition-colors" href="#">Program Diklat</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm text-label-sm transition-colors" href="#">Jadwal</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm text-label-sm transition-colors" href="#">Informasi</a>
-<a class="text-gray-600 dark:text-gray-400 hover:text-blue-500 font-label-sm text-label-sm transition-colors" href="#">Kontak</a>
-</nav>
-</div>
-</header>
+<body class="bg-background text-on-background"><div id="sidia-header"></div>
+
+
 <main class="max-w-7xl mx-auto px-4 md:px-8 py-xl">
 <!-- Hero Title Section -->
 <div class="mb-lg">
@@ -333,98 +306,9 @@
 </div>
 </main>
 <!-- Footer Shell -->
-<footer class="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12 px-6 max-w-7xl mx-auto">
-<div class="flex flex-col gap-4">
-<span class="font-bold text-gray-900 dark:text-white text-xl">SIDIA</span>
-<p class="font-public-sans text-sm text-gray-500">Sistem Informasi Diklat Industri merupakan portal resmi pendaftaran dan informasi pelatihan di bawah naungan Kementerian Perindustrian RI.</p>
-</div>
-<div class="flex flex-col gap-3">
-<span class="font-bold text-gray-900 dark:text-white mb-2">Tautan Cepat</span>
-<a class="font-public-sans text-sm text-gray-500 hover:text-blue-600 transition-colors" href="#">Beranda</a>
-<a class="font-public-sans text-sm text-gray-500 hover:text-blue-600 transition-colors" href="#">Program Diklat</a>
-<a class="font-public-sans text-sm text-gray-500 hover:text-blue-600 transition-colors" href="#">Peta Situs</a>
-</div>
-<div class="flex flex-col gap-3">
-<span class="font-bold text-gray-900 dark:text-white mb-2">Pusat Informasi</span>
-<a class="font-public-sans text-sm text-gray-500 hover:text-blue-600 transition-colors" href="#">Kebijakan Privasi</a>
-<a class="font-public-sans text-sm text-gray-500 hover:text-blue-600 transition-colors" href="#">Kontak Kami</a>
-<a class="font-public-sans text-sm text-gray-500 hover:text-blue-600 transition-colors" href="#">FAQ</a>
-</div>
-<div class="flex flex-col gap-4">
-<span class="font-bold text-gray-900 dark:text-white mb-2">Kantor Pusat</span>
-<p class="font-public-sans text-sm text-gray-500">Jl. Gatot Subroto Kav. 52-53, Jakarta Selatan, 12950.</p>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-gray-400 hover:text-blue-600 cursor-pointer" data-icon="public">public</span>
-<span class="material-symbols-outlined text-gray-400 hover:text-blue-600 cursor-pointer" data-icon="mail">mail</span>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-6 py-6 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-<span class="font-public-sans text-sm text-gray-500">Â© 2024 Sistem Informasi Diklat Industri (SIDIA). Kementerian Perindustrian RI.</span>
-<div class="flex gap-4">
-<img alt="Kemenperin Logo" class="h-8 grayscale opacity-50" data-alt="official government seal of the Ministry of Industry of Indonesia in clean monochrome style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz8hCvUb12nXgwN-tfinP9cnx0VJpRCVh8U53VYbtFABv5LS9xEq3Vmye10C5SuRJ7_AJPfpBjSYHWjy7VMXhQNb3R5MAOsTNbaNG7zlAVmOd3NDpLjn6t7XxAcUQEOIgWJCrIwC-0fXdQkOCxCshXTzK4BtX8xgmo3Ur0lxa6MeCYTrVCOs3DzKaB5YI05FLFeQWi8CXyf9AbCoNRyjnJmk3vrrYkMuhA6yUXqLdiWxDQPUb8_k0n6hsdaEpv-1HVAg12-g1B9Q"/>
-</div>
-</div>
-</footer>
+<div id="sidia-footer"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const routeMap = {
-        'home': '../home_sidia_new_style/code.html',
-        'berita': '../berita_sidia_new_style/code.html',
-        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
-        'statistik': '../statistik_sidia_new_style/code.html',
-        'diklat': '../diklat_sidia_new_style/code.html',
-        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
-        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
-        'login': '../login_sidia_new_style/code.html',
-        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
-        'sidia': '../home_sidia_new_style/code.html'
-    };
 
-    const handleNavigation = (text) => {
-        text = text.toLowerCase().trim();
-        // Check for exact matches first
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text === key) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        // Then partial matches
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text.includes(key)) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        return false;
-    };
-
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('a, button, [role="button"]');
-        if (!target) return;
-
-        const text = target.innerText.trim();
-        if (text && handleNavigation(text)) {
-            e.preventDefault();
-        }
-    });
-
-    // Special case for the SIDIA logo
-    const elements = document.querySelectorAll('span, div, a');
-    elements.forEach(el => {
-        if (el.innerText.trim() === 'SIDIA') {
-            el.style.cursor = 'pointer';
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                window.location.href = routeMap['home'];
-            });
-        }
-    });
-});
-</script>
 </body></html>
 
 

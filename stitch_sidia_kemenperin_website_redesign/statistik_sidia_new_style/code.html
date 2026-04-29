@@ -110,391 +110,241 @@
             @apply bg-primary-container text-white;
         }
     </style>
+
+<script src="../shared/components.js" data-page="statistik"></script>
 </head>
 <body class="bg-surface font-body-md text-on-surface">
-<!-- TopNavBar -->
-<header class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
-<div class="max-w-[1280px] mx-auto px-6 flex flex-col w-full">
-<div class="flex items-center justify-between h-16">
-<!-- Brand -->
-<div class="flex items-center gap-8">
-<span class="text-2xl font-extrabold text-primary">SIDIA</span>
-<!-- Desktop Nav Links -->
-<nav class="hidden md:flex items-center gap-6">
-<a class="text-gray-600 hover:text-primary font-medium text-sm transition-colors" href="#">Home</a>
-<a class="text-gray-600 hover:text-primary font-medium text-sm transition-colors" href="#">Berita</a>
-<a class="text-gray-600 hover:text-primary font-medium text-sm transition-colors" href="#">Satuan Kerja</a>
-<a class="text-primary border-b-2 border-primary pb-1 font-bold text-sm" href="#">Statistik</a>
-<a class="text-gray-600 hover:text-primary font-medium text-sm transition-colors" href="#">Diklat</a>
-<a class="text-gray-600 hover:text-primary font-medium text-sm transition-colors" href="#">Infrastruktur</a>
-</nav>
+<div id="sidia-header"></div><main class="w-full">
+<!-- Hero Banner -->
+<div class="w-full bg-gradient-to-r from-blue-500 to-blue-400 py-8 text-center">
+  <h1 class="text-2xl md:text-3xl font-bold text-white">Big Picture Diklat 3 in 1 Tahun 2026</h1>
 </div>
-<!-- Actions -->
-<div class="flex items-center gap-4">
-<div class="hidden lg:flex items-center gap-2 mr-4">
-<button class="p-2 hover:bg-gray-50 rounded-full transition-colors">
-<span class="material-symbols-outlined" data-icon="language">language</span>
-</button>
-<button class="p-2 hover:bg-gray-50 rounded-full transition-colors">
-<span class="material-symbols-outlined" data-icon="map">map</span>
-</button>
-</div>
-<button class="px-4 py-2 border border-primary text-primary font-button rounded-lg hover:bg-primary-fixed transition-all text-sm">Login</button>
-<button class="px-4 py-2 bg-[#E11D48] text-white font-button rounded-lg shadow-sm hover:brightness-90 transition-all text-sm">Pendaftaran</button>
-</div>
-</div>
-</div>
-</header>
-<main class="max-w-[1280px] mx-auto px-6 py-10">
-<!-- Dashboard Header -->
-<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
-<div>
-<h1 class="font-h1 text-h1 text-on-background mb-2">Statistik Pengembangan SDM Industri</h1>
-<p class="text-on-surface-variant max-w-2xl">Dashboard pemantauan indikator utama kinerja pengembangan sumber daya manusia di sektor industri Indonesia secara real-time.</p>
-</div>
-<div class="flex gap-3">
-<div class="relative">
-<select class="appearance-none bg-white border border-outline-variant px-4 py-2 pr-10 rounded-lg text-sm font-medium focus:ring-2 focus:ring-primary focus:outline-none">
-<option>Tahun 2024</option>
-<option>Tahun 2023</option>
-<option>Tahun 2022</option>
-</select>
-<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-outline">expand_more</span>
-</div>
-<button class="flex items-center gap-2 px-4 py-2 bg-white border border-outline-variant rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
-<span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span>
-                    Unduh Laporan
-                </button>
-</div>
-</div>
-<!-- Metric Cards -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-<div class="bg-white p-6 rounded-xl border border-outline-variant shadow-sm">
-<div class="flex items-center justify-between mb-4">
-<span class="material-symbols-outlined text-primary bg-primary-fixed p-2 rounded-lg" data-icon="groups">groups</span>
-<span class="text-green-600 text-sm font-bold flex items-center">
-<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span> 12%
-                    </span>
-</div>
-<h3 class="text-on-surface-variant text-label-sm mb-1 uppercase tracking-wider">Total Peserta Diklat</h3>
-<p class="text-h2 font-h2 text-on-surface">45.280</p>
-</div>
-<div class="bg-white p-6 rounded-xl border border-outline-variant shadow-sm">
-<div class="flex items-center justify-between mb-4">
-<span class="material-symbols-outlined text-secondary bg-secondary-fixed p-2 rounded-lg" data-icon="school">school</span>
-<span class="text-green-600 text-sm font-bold flex items-center">
-<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span> 8.4%
-                    </span>
-</div>
-<h3 class="text-on-surface-variant text-label-sm mb-1 uppercase tracking-wider">Lulusan Sertifikasi</h3>
-<p class="text-h2 font-h2 text-on-surface">38.120</p>
-</div>
-<div class="bg-white p-6 rounded-xl border border-outline-variant shadow-sm">
-<div class="flex items-center justify-between mb-4">
-<span class="material-symbols-outlined text-tertiary bg-tertiary-fixed p-2 rounded-lg" data-icon="business">business</span>
-<span class="text-primary text-sm font-bold">Aktif</span>
-</div>
-<h3 class="text-on-surface-variant text-label-sm mb-1 uppercase tracking-wider">Mitra Industri</h3>
-<p class="text-h2 font-h2 text-on-surface">1.402</p>
-</div>
-<div class="bg-white p-6 rounded-xl border border-outline-variant shadow-sm">
-<div class="flex items-center justify-between mb-4">
-<span class="material-symbols-outlined text-primary bg-surface-container-high p-2 rounded-lg" data-icon="account_balance">account_balance</span>
-<span class="text-on-surface-variant text-sm font-medium">Satker</span>
-</div>
-<h3 class="text-on-surface-variant text-label-sm mb-1 uppercase tracking-wider">Unit Diklat Aktif</h3>
-<p class="text-h2 font-h2 text-on-surface">24</p>
-</div>
-</div>
-<!-- Bento Grid Visualizations -->
-<div class="grid grid-cols-12 gap-6">
-<!-- Bar Chart: Yearly Training -->
-<div class="col-span-12 lg:col-span-8 bg-white p-8 rounded-xl border border-outline-variant shadow-sm">
-<div class="flex items-center justify-between mb-8">
-<h3 class="font-h3 text-h3 text-on-surface">Trend Peserta Diklat Tahunan</h3>
-<div class="flex items-center gap-4 text-xs font-medium text-on-surface-variant">
-<div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-primary rounded-full"></span> Target</div>
-<div class="flex items-center gap-1.5"><span class="w-3 h-3 bg-primary-fixed-dim rounded-full"></span> Realisasi</div>
-</div>
-</div>
-<div class="flex items-end justify-between h-64 gap-4 px-4">
-<!-- 2020 -->
-<div class="flex-1 flex flex-col justify-end gap-1 group h-full">
-<div class="relative w-full bg-primary-fixed-dim rounded-t-sm h-[60%] hover:brightness-95 cursor-help">
-<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">28.4k</div>
-</div>
-<div class="w-full bg-primary rounded-t-sm h-[70%]"></div>
-<span class="text-xs text-center mt-2 text-outline">2020</span>
-</div>
-<!-- 2021 -->
-<div class="flex-1 flex flex-col justify-end gap-1 group h-full">
-<div class="relative w-full bg-primary-fixed-dim rounded-t-sm h-[65%] hover:brightness-95 cursor-help">
-<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">30.2k</div>
-</div>
-<div class="w-full bg-primary rounded-t-sm h-[75%]"></div>
-<span class="text-xs text-center mt-2 text-outline">2021</span>
-</div>
-<!-- 2022 -->
-<div class="flex-1 flex flex-col justify-end gap-1 group h-full">
-<div class="relative w-full bg-primary-fixed-dim rounded-t-sm h-[80%] hover:brightness-95 cursor-help">
-<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">36.8k</div>
-</div>
-<div class="w-full bg-primary rounded-t-sm h-[85%]"></div>
-<span class="text-xs text-center mt-2 text-outline">2022</span>
-</div>
-<!-- 2023 -->
-<div class="flex-1 flex flex-col justify-end gap-1 group h-full">
-<div class="relative w-full bg-primary-fixed-dim rounded-t-sm h-[90%] hover:brightness-95 cursor-help">
-<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">42.1k</div>
-</div>
-<div class="w-full bg-primary rounded-t-sm h-[92%]"></div>
-<span class="text-xs text-center mt-2 text-outline">2023</span>
-</div>
-<!-- 2024 -->
-<div class="flex-1 flex flex-col justify-end gap-1 group h-full">
-<div class="relative w-full bg-primary-fixed-dim rounded-t-sm h-[45%] hover:brightness-95 cursor-help">
-<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-inverse-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">21.5k (Q2)</div>
-</div>
-<div class="w-full bg-primary rounded-t-sm h-[40%]"></div>
-<span class="text-xs text-center mt-2 text-outline">2024*</span>
-</div>
-</div>
-</div>
-<!-- Pie Chart: Distribution -->
-<div class="col-span-12 lg:col-span-4 bg-white p-8 rounded-xl border border-outline-variant shadow-sm flex flex-col">
-<h3 class="font-h3 text-h3 text-on-surface mb-6">Distribusi per Sektor</h3>
-<div class="flex-grow flex items-center justify-center relative py-6">
-<!-- SVG Pie Simulation -->
-<div class="relative w-48 h-48 rounded-full border-[24px] border-primary-fixed flex items-center justify-center">
-<div class="absolute inset-0 rounded-full border-[24px] border-primary border-r-transparent border-b-transparent rotate-45"></div>
-<div class="absolute inset-0 rounded-full border-[24px] border-secondary border-l-transparent border-t-transparent -rotate-12"></div>
-<div class="text-center">
-<p class="text-h3 font-bold">100%</p>
-<p class="text-[10px] text-outline uppercase tracking-tighter">Total Sektor</p>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-y-3 mt-4">
-<div class="flex items-center gap-2 text-xs">
-<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
-<span class="text-on-surface-variant">Manufaktur (45%)</span>
-</div>
-<div class="flex items-center gap-2 text-xs">
-<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
-<span class="text-on-surface-variant">Tekstil (25%)</span>
-</div>
-<div class="flex items-center gap-2 text-xs">
-<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed"></span>
-<span class="text-on-surface-variant">Elektronik (15%)</span>
-</div>
-<div class="flex items-center gap-2 text-xs">
-<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
-<span class="text-on-surface-variant">Lainnya (15%)</span>
-</div>
-</div>
-</div>
-<!-- Regional Distribution Map -->
-<div class="col-span-12 bg-white p-8 rounded-xl border border-outline-variant shadow-sm">
-<div class="flex items-center justify-between mb-8">
-<div>
-<h3 class="font-h3 text-h3 text-on-surface">Distribusi Wilayah Satuan Kerja</h3>
-<p class="text-on-surface-variant text-sm">Pemetaan lokasi Diklat dan Unit Pendidikan di seluruh Indonesia</p>
-</div>
-<div class="flex gap-2">
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-primary">Barat: 14</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-primary">Tengah: 7</span>
-<span class="px-3 py-1 bg-surface-container rounded-full text-xs font-semibold text-primary">Timur: 3</span>
-</div>
-</div>
-<div class="relative w-full aspect-[21/9] bg-surface-container-low rounded-xl overflow-hidden group">
-<img class="w-full h-full object-cover mix-blend-overlay opacity-30 grayscale" data-alt="abstract stylized topographic map of the Indonesian archipelago with digital grid overlays and glowing nodes indicating location data" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYYNNW3I4S6oSPA6yBWzMqL9Obrd0J99cISWgaMDDmmKFaVZl6rHvGev1-j0ZR67fhCX-Fo8bbPKh7Ku1A-kw0lo8S0o5IKN7HMmISuzrU7SXe9U5AUEVLxd14_iSZjTHfxwac8K-Es4r38FTaJd4xioDJFYvVhfUV2Vgsz0naRd6UKGjtf3bgQxUkI9_DWg-4FPdcItUktz6lyXPzsdnNCGKLaLKr9kG4_19a4YZLjjLJBEE6nslM7qYJr6CuEzAAUhH_Xp6F7w"/>
-<!-- Decorative Map Markers -->
-<div class="absolute top-1/2 left-[25%] -translate-y-12">
-<div class="relative group cursor-pointer">
-<div class="w-4 h-4 bg-primary rounded-full animate-pulse"></div>
-<div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-white px-3 py-1.5 rounded-lg shadow-lg border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-<p class="text-[10px] font-bold">Jakarta (Pusat)</p>
-<p class="text-[10px] text-primary">8 Satker</p>
-</div>
-</div>
-</div>
-<div class="absolute top-1/2 left-[50%] translate-y-8">
-<div class="relative group cursor-pointer">
-<div class="w-4 h-4 bg-primary rounded-full animate-pulse"></div>
-<div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-white px-3 py-1.5 rounded-lg shadow-lg border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-<p class="text-[10px] font-bold">Makassar</p>
-<p class="text-[10px] text-primary">3 Satker</p>
-</div>
-</div>
-</div>
-<div class="absolute top-[60%] left-[80%]">
-<div class="relative group cursor-pointer">
-<div class="w-4 h-4 bg-primary rounded-full animate-pulse"></div>
-<div class="absolute -top-12 left-1/2 -translate-x-1/2 bg-white px-3 py-1.5 rounded-lg shadow-lg border border-outline-variant opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-<p class="text-[10px] font-bold">Sorong</p>
-<p class="text-[10px] text-primary">1 Satker</p>
-</div>
-</div>
-</div>
-<!-- Overlay Legend -->
-<div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-lg border border-outline-variant max-w-xs">
-<p class="text-xs font-bold mb-2">Pusat Diklat Unggulan</p>
-<div class="space-y-2">
-<div class="flex justify-between text-[10px]">
-<span class="text-outline">BDI Jakarta</span>
-<span class="font-bold">Aktif</span>
-</div>
-<div class="flex justify-between text-[10px]">
-<span class="text-outline">BDI Surabaya</span>
-<span class="font-bold">Aktif</span>
-</div>
-<div class="flex justify-between text-[10px]">
-<span class="text-outline">BDI Makassar</span>
-<span class="font-bold">Aktif</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Recent Training Activities Table -->
-<div class="col-span-12 bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
-<div class="p-6 border-b border-outline-variant flex justify-between items-center">
-<h3 class="font-h3 text-h3 text-on-surface">Pelatihan Terbaru</h3>
-<button class="text-primary text-sm font-bold hover:underline">Lihat Semua</button>
-</div>
-<div class="overflow-x-auto">
-<table class="w-full text-left">
-<thead>
-<tr class="bg-gray-50">
-<th class="px-6 py-4 text-label-sm text-outline font-bold uppercase tracking-wider">Nama Program</th>
-<th class="px-6 py-4 text-label-sm text-outline font-bold uppercase tracking-wider">Satker Penyelenggara</th>
-<th class="px-6 py-4 text-label-sm text-outline font-bold uppercase tracking-wider">Tanggal</th>
-<th class="px-6 py-4 text-label-sm text-outline font-bold uppercase tracking-wider">Peserta</th>
-<th class="px-6 py-4 text-label-sm text-outline font-bold uppercase tracking-wider">Status</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-outline-variant">
-<tr class="hover:bg-surface-container-lowest transition-colors">
-<td class="px-6 py-4">
-<p class="text-sm font-bold text-on-surface">Teknisi Mesin Industri 4.0</p>
-<p class="text-xs text-outline">Sertifikasi Level 3</p>
-</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">BDI Jakarta</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">12 - 24 Mei 2024</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">120 Orang</td>
-<td class="px-6 py-4">
-<span class="px-2.5 py-1 bg-green-100 text-green-800 rounded-full text-[10px] font-bold uppercase">Berlangsung</span>
-</td>
-</tr>
-<tr class="hover:bg-surface-container-lowest transition-colors">
-<td class="px-6 py-4">
-<p class="text-sm font-bold text-on-surface">Manajemen Produksi Tekstil</p>
-<p class="text-xs text-outline">Diklat Teknis</p>
-</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">BDI Bandung</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">05 - 19 Mei 2024</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">85 Orang</td>
-<td class="px-6 py-4">
-<span class="px-2.5 py-1 bg-blue-100 text-blue-800 rounded-full text-[10px] font-bold uppercase">Selesai</span>
-</td>
-</tr>
-<tr class="hover:bg-surface-container-lowest transition-colors">
-<td class="px-6 py-4">
-<p class="text-sm font-bold text-on-surface">Digital Marketing UMKM Industri</p>
-<p class="text-xs text-outline">Workshop Nasional</p>
-</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">BDI Denpasar</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">20 - 22 Mei 2024</td>
-<td class="px-6 py-4 text-sm text-on-surface-variant">250 Orang</td>
-<td class="px-6 py-4">
-<span class="px-2.5 py-1 bg-yellow-100 text-yellow-800 rounded-full text-[10px] font-bold uppercase">Mendatang</span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+
+<!-- Filter & Tabs Section -->
+<div class="max-w-[1280px] mx-auto px-6 py-8">
+
+  <!-- Filter Row -->
+  <div class="flex items-center gap-4 mb-8">
+    <span class="material-symbols-outlined text-on-surface text-2xl">calendar_month</span>
+    <h2 class="text-xl font-bold text-on-surface mr-2">Tahun Diklat</h2>
+    <div class="relative">
+      <select id="tahun-select" class="appearance-none bg-white border border-outline-variant px-4 py-2 pr-8 rounded text-sm font-medium focus:ring-2 focus:ring-primary focus:outline-none">
+        <option>2026</option><option>2025</option><option>2024</option>
+      </select>
+      <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-sm">expand_more</span>
+    </div>
+    <div class="relative">
+      <select id="penyelenggara-select" class="appearance-none bg-white border border-outline-variant px-4 py-2 pr-8 rounded text-sm font-medium focus:ring-2 focus:ring-primary focus:outline-none">
+        <option>Semua Penyelenggara</option><option>BDI Jakarta</option><option>BDI Surabaya</option><option>BDI Makassar</option>
+      </select>
+      <span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-sm">expand_more</span>
+    </div>
+  </div>
+
+  <!-- Tab Navigation -->
+  <div class="flex flex-wrap gap-0 mb-8 border-b border-outline-variant">
+    <button onclick="showTab('sebaran')" id="tab-sebaran" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-primary text-primary">Sebaran Lulusan</button>
+    <button onclick="showTab('penyelenggara')" id="tab-penyelenggara" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-primary">Penyelenggara Diklat</button>
+    <button onclick="showTab('kompetensi')" id="tab-kompetensi" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-primary">Kompetensi</button>
+    <button onclick="showTab('skema')" id="tab-skema" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-primary">Skema</button>
+    <button onclick="showTab('penempatan')" id="tab-penempatan" class="tab-btn px-5 py-3 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-primary">Penempatan Kerja</button>
+  </div>
+
+  <!-- Tab: Sebaran Lulusan -->
+  <div id="panel-sebaran" class="tab-panel">
+    <h3 class="text-base font-semibold text-on-surface mb-4">Sebaran Per Provinsi</h3>
+    <div class="bg-white border border-outline-variant rounded-lg p-4 flex items-center justify-center min-h-[400px]">
+      <svg viewBox="0 0 900 420" class="w-full max-w-3xl" style="font-family:inherit">
+        <!-- Simplified Indonesia map representation -->
+        <!-- Sumatera -->
+        <ellipse cx="160" cy="200" rx="70" ry="110" fill="#c7c7f7" stroke="#fff" stroke-width="1.5" opacity="0.8"/>
+        <text x="155" y="160" font-size="9" fill="#333" text-anchor="middle">Aceh</text>
+        <ellipse cx="175" cy="230" rx="55" ry="55" fill="#7c7ce8" stroke="#fff" stroke-width="1.5" opacity="0.9"/>
+        <text x="175" y="233" font-size="9" fill="#fff" text-anchor="middle">Sumatera Utara</text>
+        <ellipse cx="195" cy="295" rx="35" ry="25" fill="#c7c7f7" stroke="#fff" stroke-width="1.5"/>
+        <text x="195" y="298" font-size="8" fill="#333" text-anchor="middle">Riau</text>
+        <ellipse cx="170" cy="330" rx="32" ry="20" fill="#c7c7f7" stroke="#fff" stroke-width="1.5"/>
+        <text x="170" y="334" font-size="8" fill="#333" text-anchor="middle">Sumatera Barat</text>
+        <text x="155" y="360" font-size="8" fill="#555">Jambi</text>
+        <text x="155" y="375" font-size="8" fill="#555">Sumatera Selatan</text>
+        <text x="150" y="390" font-size="8" fill="#555">Bengkulu</text>
+        <text x="185" y="400" font-size="8" fill="#555">Lampung</text>
+        <!-- Kepulauan Riau -->
+        <text x="285" y="270" font-size="8" fill="#555">Kepulauan Riau</text>
+        <!-- Jawa -->
+        <ellipse cx="285" cy="375" rx="65" ry="20" fill="#c7c7f7" stroke="#fff" stroke-width="1.5"/>
+        <text x="265" y="370" font-size="9" fill="#333">Jakarta Raya</text>
+        <ellipse cx="355" cy="385" rx="40" ry="15" fill="#7c7ce8" stroke="#fff" stroke-width="1.5"/>
+        <text x="355" y="389" font-size="8" fill="#fff" text-anchor="middle">Jawa Barat</text>
+        <!-- Kalimantan -->
+        <ellipse cx="470" cy="260" rx="70" ry="80" fill="#c7c7f7" stroke="#fff" stroke-width="1.5"/>
+        <text x="430" y="220" font-size="8" fill="#555">Kalimantan Barat</text>
+        <text x="450" y="250" font-size="8" fill="#555">Kalimantan Tengah</text>
+        <text x="440" y="290" font-size="8" fill="#555">Kalimantan Selatan</text>
+        <text x="490" y="200" font-size="8" fill="#555">Kalimantan Utara</text>
+        <text x="490" y="230" font-size="8" fill="#555">Kalimantan Timur</text>
+        <!-- Sulawesi -->
+        <ellipse cx="620" cy="260" rx="40" ry="70" fill="#c7c7f7" stroke="#fff" stroke-width="1.5"/>
+        <text x="598" y="220" font-size="8" fill="#555">Sulawesi Utara</text>
+        <text x="590" y="245" font-size="8" fill="#555">Gorontalo</text>
+        <text x="595" y="270" font-size="8" fill="#555">Sulawesi Tengah</text>
+        <text x="595" y="295" font-size="8" fill="#555">Sulawesi Barat</text>
+        <text x="600" y="315" font-size="8" fill="#555">Sulawesi Selatan</text>
+        <!-- Maluku & Papua -->
+        <text x="710" y="200" font-size="8" fill="#555">Maluku Utara</text>
+        <text x="720" y="300" font-size="8" fill="#555">Maluku</text>
+        <text x="780" y="240" font-size="8" fill="#555">Papua Barat</text>
+        <ellipse cx="850" cy="280" rx="40" ry="50" fill="#c7c7f7" stroke="#fff" stroke-width="1.5"/>
+        <text x="850" y="283" font-size="9" fill="#333" text-anchor="middle">Papua</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Tab: Penyelenggara Diklat -->
+  <div id="panel-penyelenggara" class="tab-panel hidden">
+    <h3 class="text-base font-semibold text-on-surface mb-4">Realisasi Diklat per Penyelenggara Tahun 2026</h3>
+    <div class="overflow-x-auto bg-white border border-outline-variant rounded-lg">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">#</th>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">PENYELENGGARA</th>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">REALISASI</th>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">%</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline-variant">
+          <tr class="hover:bg-gray-50"><td class="px-4 py-3">1</td><td class="px-4 py-3">BDI Jakarta</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+          <tr class="hover:bg-gray-50"><td class="px-4 py-3">2</td><td class="px-4 py-3">BDI Surabaya</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+          <tr class="hover:bg-gray-50"><td class="px-4 py-3">3</td><td class="px-4 py-3">BDI Makassar</td><td class="px-4 py-3">20</td><td class="px-4 py-3">34%</td></tr>
+          <tr class="hover:bg-gray-50"><td class="px-4 py-3">4</td><td class="px-4 py-3">BDI Medan</td><td class="px-4 py-3">39</td><td class="px-4 py-3">66%</td></tr>
+          <tr class="bg-gray-50 font-semibold"><td class="px-4 py-3"></td><td class="px-4 py-3">Total</td><td class="px-4 py-3">59</td><td class="px-4 py-3">100%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Tab: Kompetensi -->
+  <div id="panel-kompetensi" class="tab-panel hidden">
+    <h3 class="text-base font-semibold text-on-surface mb-4">Realisasi Diklat per Kompetensi Tahun 2026</h3>
+    <div class="flex flex-col lg:flex-row gap-6">
+      <!-- Pie chart SVG -->
+      <div class="bg-white border border-outline-variant rounded-lg p-6 flex flex-col items-center justify-center min-w-[300px]">
+        <svg viewBox="0 0 200 200" class="w-48 h-48">
+          <!-- Slice 1: Pengolahan Hasil Laut 34% ~ 122deg -->
+          <path d="M100,100 L100,10 A90,90 0 0,1 176,145 Z" fill="#6b7de8"/>
+          <!-- Slice 2: Pengolahan Produk Agro 66% ~ 238deg -->
+          <path d="M100,100 L176,145 A90,90 0 1,1 100,10 Z" fill="#f5a623"/>
+        </svg>
+        <div class="flex flex-wrap gap-3 mt-4 justify-center text-xs">
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#6b7de8] inline-block"></span>Pengolahan Hasil Laut</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#f5a623] inline-block"></span>Pengolahan Produk Agro</span>
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="flex-1 overflow-x-auto bg-white border border-outline-variant rounded-lg">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">#</th>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">KOMPETENSI</th>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">REALISASI</th>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">%</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-outline-variant">
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">1</td><td class="px-4 py-3">Alas Kaki</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">2</td><td class="px-4 py-3">Internet of Things</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">3</td><td class="px-4 py-3">Pengelasan</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">4</td><td class="px-4 py-3">Pengolahan Hasil Laut</td><td class="px-4 py-3">20</td><td class="px-4 py-3">34%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">5</td><td class="px-4 py-3">Pengolahan Produk Agro</td><td class="px-4 py-3">39</td><td class="px-4 py-3">66%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">6</td><td class="px-4 py-3">TPT</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="bg-gray-50 font-semibold"><td class="px-4 py-3"></td><td class="px-4 py-3">Total</td><td class="px-4 py-3">59</td><td class="px-4 py-3">100%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Skema -->
+  <div id="panel-skema" class="tab-panel hidden">
+    <h3 class="text-base font-semibold text-on-surface mb-4">Realisasi Diklat per Skema Tahun 2026</h3>
+    <div class="flex flex-col lg:flex-row gap-6">
+      <div class="bg-white border border-outline-variant rounded-lg p-6 flex flex-col items-center justify-center min-w-[300px]">
+        <svg viewBox="0 0 200 200" class="w-48 h-48">
+          <path d="M100,100 L100,10 A90,90 0 0,1 176,145 Z" fill="#7c3aed"/>
+          <path d="M100,100 L176,145 A90,90 0 0,1 24,145 Z" fill="#f5a623"/>
+          <path d="M100,100 L24,145 A90,90 0 0,1 100,10 Z" fill="#e11d48"/>
+        </svg>
+        <div class="flex flex-wrap gap-3 mt-4 justify-center text-xs">
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#7c3aed] inline-block"></span>Assembling</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#f5a623] inline-block"></span>Aneka Olahan Ikan</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#e11d48] inline-block"></span>Fillet Welder</span>
+        </div>
+      </div>
+      <div class="flex-1 overflow-x-auto bg-white border border-outline-variant rounded-lg">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-gray-50">
+            <tr>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">#</th>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">KOMPETENSI</th>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">SKEMA</th>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">REALISASI</th>
+              <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">%</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-outline-variant">
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">1</td><td class="px-4 py-3">Alas Kaki</td><td class="px-4 py-3">Assembling</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">2</td><td class="px-4 py-3">Internet of Things</td><td class="px-4 py-3">Perekayasaan Perangkat Internet of Things (IoT)</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">3</td><td class="px-4 py-3">Pengelasan</td><td class="px-4 py-3">Fillet Welder</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">4</td><td class="px-4 py-3">Pengelasan</td><td class="px-4 py-3">Plate Welder</td><td class="px-4 py-3">0</td><td class="px-4 py-3">0%</td></tr>
+            <tr class="hover:bg-gray-50"><td class="px-4 py-3">5</td><td class="px-4 py-3">Pengolahan Hasil Laut</td><td class="px-4 py-3">Aneka Olahan Ikan</td><td class="px-4 py-3">20</td><td class="px-4 py-3">34%</td></tr>
+            <tr class="bg-gray-50 font-semibold"><td class="px-4 py-3"></td><td class="px-4 py-3" colspan="2">Total</td><td class="px-4 py-3">59</td><td class="px-4 py-3">100%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Penempatan Kerja -->
+  <div id="panel-penempatan" class="tab-panel hidden">
+    <h3 class="text-base font-semibold text-on-surface mb-4">Penempatan Kerja Tahun 2026</h3>
+    <div class="overflow-x-auto bg-white border border-outline-variant rounded-lg">
+      <table class="w-full text-left text-sm">
+        <thead class="bg-gray-50">
+          <tr>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">#</th>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">KOMPETENSI</th>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">PENEMPATAN KERJA</th>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">JUMLAH</th>
+            <th class="px-4 py-3 text-xs font-bold text-gray-500 uppercase tracking-wider">%</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-outline-variant">
+          <tr class="hover:bg-gray-50">
+            <td class="px-4 py-3">1</td>
+            <td class="px-4 py-3 text-blue-600 font-medium cursor-pointer hover:underline">Pengolahan Hasil Laut</td>
+            <td class="px-4 py-3"></td>
+            <td class="px-4 py-3">59</td>
+            <td class="px-4 py-3">100%</td>
+          </tr>
+          <tr class="bg-gray-50 font-semibold">
+            <td class="px-4 py-3"></td>
+            <td class="px-4 py-3">Total</td>
+            <td class="px-4 py-3"></td>
+            <td class="px-4 py-3">59</td>
+            <td class="px-4 py-3">100%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 </div>
 </main>
-<!-- Footer -->
-<footer class="bg-gray-50 border-t border-gray-200 mt-20">
-<div class="max-w-[1280px] mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 w-full">
-<div class="flex flex-col items-center md:items-start gap-4">
-<span class="text-lg font-bold text-gray-900">SIDIA</span>
-<p class="font-public-sans text-xs text-gray-500">Â© 2024 SIDIA Portal Pemerintah. Seluruh Hak Cipta Dilindungi.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-6">
-<a class="text-xs text-gray-500 hover:text-blue-600 hover:underline transition-colors" href="#">Tentang Kami</a>
-<a class="text-xs text-gray-500 hover:text-blue-600 hover:underline transition-colors" href="#">Hubungi Kami</a>
-<a class="text-xs text-gray-500 hover:text-blue-600 hover:underline transition-colors" href="#">Kebijakan Privasi</a>
-<a class="text-xs text-gray-500 hover:text-blue-600 hover:underline transition-colors" href="#">Syarat &amp; Ketentuan</a>
-<a class="text-xs text-gray-500 hover:text-blue-600 hover:underline transition-colors" href="#">Bantuan</a>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-gray-400 cursor-pointer hover:text-primary" data-icon="facebook">social_leaderboard</span>
-<span class="material-symbols-outlined text-gray-400 cursor-pointer hover:text-primary" data-icon="alternate_email">alternate_email</span>
-<span class="material-symbols-outlined text-gray-400 cursor-pointer hover:text-primary" data-icon="public">public</span>
-</div>
-</div>
-</footer>
+<div id="sidia-footer"></div>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const routeMap = {
-        'home': '../home_sidia_new_style/code.html',
-        'berita': '../berita_sidia_new_style/code.html',
-        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
-        'statistik': '../statistik_sidia_new_style/code.html',
-        'diklat': '../diklat_sidia_new_style/code.html',
-        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
-        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
-        'login': '../login_sidia_new_style/code.html',
-        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
-        'sidia': '../home_sidia_new_style/code.html'
-    };
 
-    const handleNavigation = (text) => {
-        text = text.toLowerCase().trim();
-        // Check for exact matches first
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text === key) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        // Then partial matches
-        for (const [key, path] of Object.entries(routeMap)) {
-            if (text.includes(key)) {
-                window.location.href = path;
-                return true;
-            }
-        }
-        return false;
-    };
-
-    document.addEventListener('click', (e) => {
-        const target = e.target.closest('a, button, [role="button"]');
-        if (!target) return;
-
-        const text = target.innerText.trim();
-        if (text && handleNavigation(text)) {
-            e.preventDefault();
-        }
-    });
-
-    // Special case for the SIDIA logo
-    const elements = document.querySelectorAll('span, div, a');
-    elements.forEach(el => {
-        if (el.innerText.trim() === 'SIDIA') {
-            el.style.cursor = 'pointer';
-            el.addEventListener('click', (e) => {
-                e.stopPropagation();
-                window.location.href = routeMap['home'];
-            });
-        }
-    });
-});
-</script>
 </body></html>
 
 
