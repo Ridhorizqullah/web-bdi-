@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Asesor - Infrastruktur Kompetensi - SIDIA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#004ac6",
+                        "surface": "#f8f9ff",
+                        "on-background": "#0b1c30",
+                        "on-surface": "#0b1c30",
+                        "outline": "#737686",
+                        "outline-variant": "#c3c6d7",
+                    },
+                    "borderRadius": { "xl": "0.5rem" },
+                    "spacing": { "gutter": "24px" },
+                    "fontFamily": { "body-md": ["Public Sans"] }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; background-color: #f8f9ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .sidebar-active { background-color: #e5eeff; color: #004ac6; border-right: 4px solid #004ac6; }
+    </style>
+</head>
+<body class="text-on-background">
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+<div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between w-full">
+<div class="flex items-center gap-12">
+<div class="text-2xl font-bold text-blue-600">SIDIA</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-gray-600 font-medium hover:text-blue-600" href="../home_sidia_new_style/code.html">Home</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="../berita_sidia_new_style/code.html">Berita</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="../satuan_kerja_sidia_new_style/code.html">Satuan Kerja</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="../statistik_sidia_new_style/code.html">Statistik</a>
+<a class="text-gray-600 font-medium hover:text-blue-600" href="../diklat_sidia_new_style/code.html">Diklat</a>
+<a class="text-blue-600 border-b-2 border-blue-600 pb-1 font-bold" href="code.html">Infrastruktur</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<a class="px-6 py-2.5 text-blue-600 font-semibold border border-blue-600 rounded-lg hover:bg-blue-50 transition-all" href="../login_sidia_new_style/code.html">Login</a>
+<a class="px-6 py-2.5 bg-rose-600 text-white font-semibold rounded-lg hover:bg-rose-700 transition-all shadow-md" href="../pendaftaran_peserta_diklat_new_style/code.html">Pendaftaran</a>
+</div>
+</div>
+</header>
+<div class="max-w-[1280px] mx-auto px-6 py-10 flex gap-gutter">
+<aside class="w-72 shrink-0">
+<div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+<div class="p-6 border-b border-gray-100">
+<h2 class="font-bold text-xl text-on-surface">Infrastruktur</h2>
+<p class="text-sm text-outline mt-1">Kompetensi Nasional</p>
+</div>
+<nav class="py-4">
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all" href="code.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all" href="skkni.html">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-medium">SKKNI</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all" href="kkni.html">
+<span class="material-symbols-outlined">account_tree</span>
+<span class="font-medium">KKNI</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all" href="lsp.html">
+<span class="material-symbols-outlined">verified</span>
+<span class="font-medium">LSP</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 sidebar-active transition-all" href="asesor.html">
+<span class="material-symbols-outlined">badge</span>
+<span class="font-medium">Asesor</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all" href="tuk.html">
+<span class="material-symbols-outlined">location_city</span>
+<span class="font-medium">TUK</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-4 text-gray-600 hover:bg-gray-50 transition-all" href="sertifikasi.html">
+<span class="material-symbols-outlined">description</span>
+<span class="font-medium">Sertifikasi</span>
+</a>
+</nav>
+</div>
+</aside>
+<main class="flex-1">
+<div class="mb-10">
+<h1 class="text-4xl font-bold text-on-background tracking-tight">Asesor Kompetensi</h1>
+<p class="text-lg text-gray-500 mt-2 max-w-3xl">Daftar tenaga ahli yang tersertifikasi untuk melakukan asesmen kompetensi dalam uji kompetensi.</p>
+</div>
+<section class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+<div class="p-6 border-b border-gray-100 flex items-center justify-between">
+<h3 class="font-bold">Direktori Asesor Terdaftar</h3>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">search</span>
+<input type="text" class="pl-9 pr-4 py-2 border border-gray-200 rounded-lg text-xs" placeholder="Cari Nama Asesor...">
+</div>
+</div>
+<div class="p-2">
+<div class="p-4 hover:bg-gray-50 flex items-center justify-between transition-all rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-500">person</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">Budi Santoso, M.T.</h4>
+<p class="text-[10px] text-gray-400">Bidang: Teknik Mesin & Industri</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded-full">MET.000.001.2024</span>
+</div>
+<div class="p-4 hover:bg-gray-50 flex items-center justify-between transition-all rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-gray-500">person</span>
+</div>
+<div>
+<h4 class="text-sm font-bold">Siti Aminah, S.Kom.</h4>
+<p class="text-[10px] text-gray-400">Bidang: Teknologi Informasi (TIK)</p>
+</div>
+</div>
+<span class="px-3 py-1 bg-blue-100 text-blue-700 text-[10px] font-bold rounded-full">TIK.120.005.2023</span>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="bg-gray-50 border-t border-gray-200 mt-20">
+<div class="max-w-[1280px] mx-auto px-8 py-12 w-full text-center">
+<p class="text-xs text-gray-500">&copy; 2024 SIDIA Portal Pemerintah. Seluruh Hak Cipta Dilindungi.</p>
+</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const routeMap = {
+        'home': '../home_sidia_new_style/code.html',
+        'berita': '../berita_sidia_new_style/code.html',
+        'satuan kerja': '../satuan_kerja_sidia_new_style/code.html',
+        'statistik': '../statistik_sidia_new_style/code.html',
+        'diklat': '../diklat_sidia_new_style/code.html',
+        'infrastruktur': '../infrastruktur_kompetensi_new_style/code.html',
+        'infrastruktur kompetensi': '../infrastruktur_kompetensi_new_style/code.html',
+        'login': '../login_sidia_new_style/code.html',
+        'pendaftaran': '../pendaftaran_peserta_diklat_new_style/code.html',
+        'sidia': '../home_sidia_new_style/code.html'
+    };
+
+    const handleNavigation = (text) => {
+        text = text.toLowerCase().trim();
+        // Check for exact matches first
+        for (const [key, path] of Object.entries(routeMap)) {
+            if (text === key) {
+                window.location.href = path;
+                return true;
+            }
+        }
+        // Then partial matches
+        for (const [key, path] of Object.entries(routeMap)) {
+            if (text.includes(key)) {
+                window.location.href = path;
+                return true;
+            }
+        }
+        return false;
+    };
+
+    document.addEventListener('click', (e) => {
+        const target = e.target.closest('a, button, [role="button"]');
+        if (!target) return;
+
+        const text = target.innerText.trim();
+        if (text && handleNavigation(text)) {
+            e.preventDefault();
+        }
+    });
+
+    // Special case for the SIDIA logo
+    const elements = document.querySelectorAll('span, div, a');
+    elements.forEach(el => {
+        if (el.innerText.trim() === 'SIDIA') {
+            el.style.cursor = 'pointer';
+            el.addEventListener('click', (e) => {
+                e.stopPropagation();
+                window.location.href = routeMap['home'];
+            });
+        }
+    });
+});
+</script>
+</body></html>
+
