@@ -1,0 +1,19 @@
+# Laravel specific
+/sidia-app/node_modules/
+/sidia-app/vendor/
+/sidia-app/.env
+/sidia-app/.env.*
+/sidia-app/storage/*.key
+/sidia-app/storage/framework/
+/sidia-app/storage/logs/
+/sidia-app/public/storage
+/sidia-app/public/build
+/sidia-app/public/hot
+/sidia-app/database/*.sqlite
+/sidia-app/database/*.sqlite-journal
+
+# General
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
